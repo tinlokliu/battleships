@@ -8,23 +8,6 @@ public class Board {
     protected Square[][] board;             //protected to allow take turn method in player class to reference.
     private Battleship[][] battleships;
 
-    //getter & setters to allow player class to use it for the take turn method
-    public int getRow() {
-        return row;
-    }
-
-    public void setRow(int row) {
-        this.row = row;
-    }
-
-    public int getCol() {
-        return col;
-    }
-
-    public void setCol(int col) {
-        this.col = col;
-    }
-
     //constructor
     public Board(int row, int col) {
         this.row = row;
@@ -35,11 +18,9 @@ public class Board {
 
     //method to generate board
     public void generateBoard() {
-        this.row = 10;
-        this.col = 10;
 
-        for (int i = 0; i < row; i++) {
-            for (int k = 0; k < col; k++) {
+        for (int i = 0; i < this.row; i++) {
+            for (int k = 0; k < this.col; k++) {
                 this.board[i][k] = new Square(i, k);
                 System.out.print(this.board[i][k]);
             }
@@ -121,17 +102,6 @@ public class Board {
 
         }
 
-        public boolean areAllShipsSunk () {                                    //checks if all ships are sunk
-            for (int i = 0; i < this.row; i++) {
-                for (int k = 0; k < this.col; k++) {
-                    if (battleships[i][k] != null && !battleships[i][k].isSunk()) {
-                        return false;
-                    }
-                }
-            }
-            return true;
-
-        }
         public String toString () {
             String boardString = "";
 
@@ -154,5 +124,22 @@ public class Board {
         }
         return true;
     }
+    
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getCol() {
+        return col;
+    }
+
+    public void setCol(int col) {
+        this.col = col;
+    }
+
 
 }

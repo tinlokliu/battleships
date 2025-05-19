@@ -65,7 +65,7 @@ public class Player {
                 System.out.println("Miss.");                         //if a square in a board has not been fired before or is empty, prints miss.
             }
 
-            if (board.areAllShipsSunk()){
+            if (board.isGameOver()){
                 return true;
             }
             return false;
