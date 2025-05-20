@@ -80,7 +80,7 @@ public class Main {
                 }
             }
 
-            currentPlayerIndex = 1 - currentPlayerIndex;
+            currentPlayerIndex = 1 - currentPlayerIndex; //toggles between the players by as 1-1=0 and 1-0=1.
         }
         
         

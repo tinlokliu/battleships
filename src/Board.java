@@ -54,8 +54,8 @@ public class Board {
         Random r = new Random();                //imported & created a new randomizer to set random co-ords for the battleship
 
         do {
-            randomRow = r.nextInt(this.row ); //sets a random row with a battleship using this.row-1 as a parameter because arrays start from 0-9
-            randomCol = r.nextInt(this.col ); //sets a random col with a battleship using this.col-1 as a parameter because arrays start from 0-9
+            randomRow = r.nextInt(this.row ); //sets a random row
+            randomCol = r.nextInt(this.col ); //sets a random col 
             vertical = r.nextBoolean();
         } while (!isSuitable(randomRow, randomCol, vertical, shipSize));         //checks to determine if is suitable
 
